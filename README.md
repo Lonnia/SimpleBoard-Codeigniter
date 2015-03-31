@@ -1,8 +1,8 @@
 # SimpleBoard-Codeigniter-PHP
-There are source codes for creating a simiple board to lear a relationship between MVC of Codeigniter.
+There are source codes for creating a simiple board to learn a relationship between MVC of Codeigniter.
 
 # Before start
-You have to set your configuration for databse (/application/config/database.php)
+You have to set your configuration for database (/application/config/database.php)
 (If you have set it, you have to do nothing.)
 
 # Others

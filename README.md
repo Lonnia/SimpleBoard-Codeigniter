@@ -4,6 +4,7 @@ There are source codes for creating a simiple board to learn a relationship betw
 # Before start
 You have to set your configuration for database (/application/config/database.php)
 (If you have set it, you have to do nothing.)
+&& Create board(a table of database) with database.sql
 
 # Others
 If you want to compare the source codes with other things based on normal PHP(without Codeigniter),

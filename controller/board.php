@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Book extends CI_Controller{
+class Seminar extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
@@ -8,37 +8,94 @@ class Book extends CI_Controller{
 		$this->load->helper('file');
 		$this->load->model('board_model');
 		$this->load->helper('date');
+		$this->load->database();
 	}
 
-	public function index(){
+	public function index()
+	{
+		redirect('/seminar/sub/presentation', 'location');
+	}
 
-		// POST로 넘겨받은 내용을 변수에 저장
+	public function sub($menu)
+	{
+
+		// Default Load Libraries
+		$this->load->library('session');
+
+		// @import head.html 
+		$this->load->view('include/header_view');
+		// @import navbar.html 
+		$this->load->view('include/navbar_view');
+
+
+		switch($menu)
+		{
+			case 'presentation':
+			$this->load->view('seminar/presentation_view');
+			break;
+
+			case 'framework':
+			$this->load->view('seminar/framework_view');
+			break;
+
+			case 'board':
+			$this->board();
+			break;
+
+			case 'web':
+			$this->load->view('seminar/web_view');
+			break;
+
+			case 'source':
+			$this->load->view('seminar/source_view');
+			break;
+
+			default:
+			$this->load->view('seminar/presentation_view');
+			break;
+		}
+
+
+		$this->load->view('include/footer_view');
+
+
+	}
+
+	public function board()
+	{
+		// initialize new variables stored POST data
 		$uploader = $this->input->post('uploader');
-
-    	// POST로 넘겨받은 내용을 변수에 저장
 		$contents = $this->input->post('contents');
 
-		// 넘어온 변수를 체크한다. 내용이 비어있지 않으면 파일을 열어 기록한다.
+		// if there is post data
 		if( $uploader!='' && $contents!='' ){
 
-			$data=array(
+			// initialize a new variable to store data
+			$data = array(
       			'uploader' =>$uploader,
       			'contents'=> $contents,
       			'uptime' => date('Y-m-d H:i:s')
     		);
 
+			// run add_board(a function of board_model)
 			$this->board_model->add_board($data);
-			echo "업로드 완료";
-			redirect('./', 'refresh');
+
+			// redirect ~/sub/board
+			redirect('./sub/board', 'refresh');
 		}else{
+
+			// run read_all(a function of board_model)
+			// store a result in a new variable
 			$result = $this->board_model->read_all();
+
+			// initialize a new variable to store a result
 			$data = array('result'=>$result);
-			$this->load->view('board_view', $data);
+
+			// pass a data to view
+			$this->load->view('/seminar/board_view', $data);
+			
 		}
 
 	}
 
-
 }
-
-?>

@@ -7,8 +7,8 @@
 2. Create board(a table of database) with database.sql
 
 # Others
-- If you want to compare the source codes with other things based on normal PHP(without Codeigniter), go to www.github.com/Lonnia/SimpleBoard.
-- A difference between SimpleBoard and SimpleBoard-Codeigniter-PHP is based on Codeigniter.
+- If you want to compare the source codes with other source codes based on normal PHP(without Codeigniter), go to www.github.com/Lonnia/SimpleBoard.
+- The difference between SimpleBoard and SimpleBoard-Codeigniter-PHP is based on Codeigniter.
 (a result is same)
 
 # Reference

@@ -13,4 +13,3 @@
 
 # Reference
 - www.phplecture.com/37
-- www.bootply.com/tlpm3v2D3i

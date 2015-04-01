@@ -1,4 +1,4 @@
-# SimpleBoard-Codeigniter-PHP
+# SimpleBoard-Codeigniter-Bootstrap
 - There are source codes for creating a simiple board to learn a relationship between MVC of Codeigniter.
 
 # Before start
@@ -7,8 +7,8 @@
 2. Create board(a table of database) with database.sql
 
 # Others
-- If you want to compare the source codes with other source codes based on normal PHP(without Codeigniter), go to www.github.com/Lonnia/SimpleBoard.
-- The difference between SimpleBoard and SimpleBoard-Codeigniter-PHP is based on Codeigniter.
+- If you want to compare the source codes with other source codes based on normal PHP(without Codeigniter), go to www.github.com/Lonnia/SimpleBoard-PHP.
+- The difference between SimpleBoard-PHP and SimpleBoard-Codeigniter-Bootstrap is based on Codeigniter.
 (a result is same)
 
 # Reference

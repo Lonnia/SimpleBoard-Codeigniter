@@ -73,9 +73,8 @@ class Seminar extends CI_Controller {
 			// initialize a new variable to store data
 			$data = array(
       			'uploader' =>$uploader,
-      			'contents'=> $contents,
-      			'uptime' => date('Y-m-d H:i:s')
-    		);
+      			'contents'=> $contents
+    			);
 
 			// run add_board(a function of board_model)
 			$this->board_model->add_board($data);
